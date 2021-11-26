@@ -1,0 +1,10 @@
+n = 100
+num = 1
+while n > 0:
+	num = num * n
+	n -= 1
+print(num)
+sum = 0
+for m in str(num):
+	sum += int(m)
+print(sum)
