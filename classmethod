@@ -1,0 +1,21 @@
+class Account:
+    def __init__(self, id, name, balance):
+        self.id = id
+        self.name = name
+        self.balance = balance
+        
+    def deposit(self, amount):
+        return self(amount)
+        
+    def withdraw(self, amount):
+        return self(amount, self.balance - amount)
+        
+    def __str__(self):
+        return f"{self.name}'s account. Balance: {self.balance}"
+
+Account.deposit = classmethod(Account.deposit)
+Account.withdraw = classmethod(Account.withdraw)
+
+#account1 = Account(1001,'Ali',5)
+
+print(Account.deposit(3))
